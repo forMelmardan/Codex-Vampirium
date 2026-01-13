@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codex Vampirium</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/localstorage.js" defer></script>
+    <script src="js/wheel.js" defer></script>
+    <script src="js/second_game.js" defer></script>
+    <link rel="shortcut icon" href="img/second_game/penta_active.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="frost-overlay"></div>
+    <div id="noise-overlay"></div>
+    <div id="flash-overlay"></div>
+    <header>
+        <a id="go-back" href="index.html"><img src="img/back.png" alt=""></a>
+        <div class="container">
+            <h1 class="h1rus">Проведи ритуал</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div id="game-container">
+                <img class="pentabg active-bg" src="img/second_game/penta_disabled.png" alt="">
+                <img class="pentabg disabled-bg" src="img/second_game/penta_active.png" alt="">
+                <div id="pentagram-map">
+                    <div class="slot s-top" data-accept="candle"></div>
+                    <div class="slot s-left" data-accept="candle"></div>
+                    <div class="slot s-right" data-accept="candle"></div>
+                    <div class="slot s-bl" data-accept="candle"></div>
+                    <div class="slot s-br" data-accept="candle"></div>
+
+                    <div class="slot s-cup" data-accept="cup"></div>
+                    <div class="slot s-skull" data-accept="skull"></div>
+                    <div class="slot s-blade" data-accept="blade"></div>
+                    <div class="slot s-ruby" data-accept="ruby"></div>
+                </div>
+            </div>
+
+            <div id="inventory">
+                <div class="item" data-type="candle"><img src="img/second_game/candle.png" alt=""></div>
+                <div class="item" data-type="candle"><img src="img/second_game/candle.png" alt=""></div>
+                <div class="item" data-type="candle"><img src="img/second_game/candle.png" alt=""></div>
+                <div class="item" data-type="candle"><img src="img/second_game/candle.png" alt=""></div>
+                <div class="item" data-type="candle"><img src="img/second_game/candle.png" alt=""></div>
+                <div class="item" data-type="skull"><img src="img/second_game/skull.png" alt=""></div>
+                <div class="item" data-type="cup"><img src="img/second_game/cup.png" alt=""></div>
+                <div class="item" data-type="blade"><img src="img/second_game/dagger.png" alt=""></div>
+                <div class="item" data-type="ruby"><img src="img/second_game/ruby.png" alt=""></div>
+            </div>
+
+            <div id="status">Выберите предмет и место</div>
+            <button class="btn-check" id="checkBtn">Прочитать заклинание</button>
+            <div style="display: none" id="open-wheel">Крутить колесо!</div>
+            <div id="wheelModal" class="wheel-overlay" style="display: none;">
+                <div class="wheel-scene">
+                    <div class="close-wheel" id="closeWheel">&times;</div>
+                    <div class="wheel-container">
+                        <div class="pointer"></div>
+                        <div class="wheel" id="wheel"></div>
+                        <button class="spin-button" id="spinBtn">spin</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
