@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 1. Очищаем визуальные эффекты и слоты
         slots.forEach(slot => {
-            slot.innerText = "";
+            slot.innerHTML = "";
             delete slot.dataset.currentType;
 
             // СБРОС ПОДСВЕТКИ: возвращаем к исходному прозрачному состоянию
@@ -33,8 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // 2. Сбрасываем инвентарь (делаем предметы снова доступными)
         items.forEach(item => {
             item.classList.remove('used', 'selected');
-            item.style.opacity = "1";
-            item.style.pointerEvents = "auto";
         });
 
         // 3. Убираем глобальные эффекты с экрана
