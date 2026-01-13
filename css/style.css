@@ -25,7 +25,7 @@ html {
     display: flex;
     height: 100%;
     flex-direction: column;
-    background: url("../img/background.jpg");
+    background: #3a0000 url("../img/background.jpg");
     background-size: 100%;
 }
 
@@ -140,6 +140,7 @@ h2 {
     border-radius: 20px;
     padding: 10px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .wheel-overlay {
